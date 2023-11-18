@@ -5,3 +5,7 @@ export interface TransformerStructure {
   velocity: number;
   resistence: number;
 }
+
+export interface TransformersRepository {
+  getTransformers: () => Promise<TransformerStructure[]>;
+}
