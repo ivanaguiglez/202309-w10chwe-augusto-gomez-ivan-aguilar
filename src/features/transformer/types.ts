@@ -1,9 +1,12 @@
-export interface TransformerStructure {
-  id: string;
+export interface TransformerData {
   imageUrl: string;
   name: string;
   velocity: number;
   resistence: number;
+}
+
+export interface TransformerStructure extends TransformerData {
+  id: string;
 }
 
 export interface TransformersRepository {
