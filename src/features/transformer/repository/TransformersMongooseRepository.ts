@@ -11,3 +11,5 @@ class TransformersMongooseRepository implements TransformersRepository {
     return transformers;
   }
 }
+
+export default TransformersMongooseRepository;
