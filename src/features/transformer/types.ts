@@ -1,8 +1,8 @@
 export interface TransformerData {
   imageUrl: string;
   name: string;
-  velocity: number;
-  resistence: number;
+  velocity: string;
+  resistence: string;
 }
 
 export interface TransformerStructure extends TransformerData {

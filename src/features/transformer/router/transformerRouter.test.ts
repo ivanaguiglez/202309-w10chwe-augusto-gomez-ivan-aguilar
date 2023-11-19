@@ -23,7 +23,7 @@ afterAll(async () => {
 
 describe("Given a GET/robotos endpoint", () => {
   describe("When it receives a request", () => {
-    test.only("Then it should respond with a status 200 and a robot Barricade and Bumblebee", async () => {
+    test("Then it should respond with a status 200 and a robot Barricade and Bumblebee", async () => {
       const expectedStatus = 200;
       const path = "/robots";
 

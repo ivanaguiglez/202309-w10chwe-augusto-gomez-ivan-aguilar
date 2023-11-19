@@ -11,11 +11,11 @@ const transformerSchema = new Schema<TransformerStructure>({
     requiered: true,
   },
   velocity: {
-    type: Number,
+    type: String,
     required: true,
   },
   resistence: {
-    type: Number,
+    type: String,
     required: true,
   },
 });
