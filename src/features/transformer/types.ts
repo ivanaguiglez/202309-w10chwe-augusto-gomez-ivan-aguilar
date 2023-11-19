@@ -6,7 +6,7 @@ export interface TransformerData {
 }
 
 export interface TransformerStructure extends TransformerData {
-  id: string;
+  _id: string;
 }
 
 export interface TransformersRepository {

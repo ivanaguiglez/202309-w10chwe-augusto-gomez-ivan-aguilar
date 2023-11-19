@@ -10,5 +10,6 @@ const transformersController = new TransformersController(
 );
 
 transformersRouter.get("/robots", transformersController.getTransformers);
+transformersRouter.post("/", transformersController.addTransformer);
 
 export default transformersRouter;

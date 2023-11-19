@@ -1,5 +1,6 @@
 import Transformer from "../../model/Transformer.js";
 import {
+  type TransformerData,
   type TransformerStructure,
   type TransformersRepository,
 } from "../types.js";
@@ -12,10 +13,16 @@ class TransformersMongooseRepository implements TransformersRepository {
   }
 
   public async addTransformer(
-    transformer: TransformerStructure,
+    transformer: TransformerData,
   ): Promise<TransformerStructure> {
-    const addedTransformer = await Transformer.create(transformer);
-    return addedTransformer;
+    try {
+      const addedTransformer = await Transformer.create(transformer);
+      return addedTransformer;
+    } catch (error) {
+      throw new Error(
+        "Error creating new transformer" + (error as Error).message,
+      );
+    }
   }
 }
 

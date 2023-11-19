@@ -11,13 +11,23 @@ class TransformersController {
     res: Response,
   ): Promise<void> => {
     const transformers = await this.transformersRepository.getTransformers();
+
     res.status(200).json({ transformers });
   };
 
-  public addTransformer = async (req: Request, res: Response) => {
-    const responseBody = req.body as TransformerData;
+  public addTransformer = async (
+    req: Request<
+      Record<string, unknown>,
+      Record<string, unknown>,
+      TransformerData
+    >,
+    res: Response,
+  ): Promise<void> => {
+    const responseBody = req.body;
+
     const addedTransformer =
       await this.transformersRepository.addTransformer(responseBody);
+
     res.status(200).json({ transformer: addedTransformer });
   };
 }
