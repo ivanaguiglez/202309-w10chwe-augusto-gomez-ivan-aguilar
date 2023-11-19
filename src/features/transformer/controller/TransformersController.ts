@@ -7,7 +7,7 @@ class TransformersController {
   ) {}
 
   public getTransformers = async (
-    req: Request,
+    _req: Request,
     res: Response,
   ): Promise<void> => {
     const transformers = await this.transformersRepository.getTransformers();
