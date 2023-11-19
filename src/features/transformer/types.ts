@@ -11,4 +11,7 @@ export interface TransformerStructure extends TransformerData {
 
 export interface TransformersRepository {
   getTransformers: () => Promise<TransformerStructure[]>;
+  addTransformer: (
+    transformer: TransformerData,
+  ) => Promise<TransformerStructure>;
 }

@@ -10,6 +10,13 @@ class TransformersMongooseRepository implements TransformersRepository {
 
     return transformers;
   }
+
+  public async addTransformer(
+    transformer: TransformerStructure,
+  ): Promise<TransformerStructure> {
+    const addedTransformer = await Transformer.create(transformer);
+    return addedTransformer;
+  }
 }
 
 export default TransformersMongooseRepository;

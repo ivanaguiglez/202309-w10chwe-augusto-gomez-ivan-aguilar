@@ -12,6 +12,7 @@ describe("Given a TransformersController's getTransformers method", () => {
 
     const transformersRepository: TransformersRepository = {
       getTransformers: jest.fn().mockResolvedValue(transformers),
+      addTransformer: jest.fn(),
     };
 
     const transformersController = new TransformersController(

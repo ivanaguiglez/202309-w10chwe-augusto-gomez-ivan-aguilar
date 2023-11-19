@@ -34,6 +34,7 @@ describe("Given a GET/robotos endpoint", () => {
       const responseBody = response.body as {
         transformers: TransformerStructure[];
       };
+
       responseBody.transformers.forEach((transformer, transformersPosition) => {
         expect(transformer).toHaveProperty(
           "name",
