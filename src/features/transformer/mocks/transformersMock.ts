@@ -1,9 +1,9 @@
 const transformersMock = [
   {
     id: "1",
-    imageUrl: "https://i.ibb.co/4JXkC9Z/barricade-350x534.webp",
-    name: "Barricade",
-    velocity: 5,
+    imageUrl: "https://i.ibb.co/xL298PY/crosshairs.webp",
+    name: "Crosshairs",
+    velocity: 9,
     resistence: 8,
   },
   {
@@ -12,13 +12,6 @@ const transformersMock = [
     name: "Bumblebee",
     velocity: 7,
     resistence: 6,
-  },
-  {
-    id: "3",
-    imageUrl: "https://i.ibb.co/xL298PY/crosshairs.webp",
-    name: "Crosshairs",
-    velocity: 9,
-    resistence: 8,
   },
 ];
 
