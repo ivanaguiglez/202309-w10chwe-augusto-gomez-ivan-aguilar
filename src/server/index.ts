@@ -8,7 +8,10 @@ import cors from "cors";
 app.use(morgan("dev"));
 app.use(
   cors({
-    origin: "https://two02309-w10chwe-augusto-gomez-ivan.onrender.com",
+    origin: [
+      "https://two02309-w10chwe-augusto-gomez-ivan.onrender.com",
+      "https://two02309-w10chwe-augusto-gomez-ivan.onrender.com/robots",
+    ],
   }),
 );
 
