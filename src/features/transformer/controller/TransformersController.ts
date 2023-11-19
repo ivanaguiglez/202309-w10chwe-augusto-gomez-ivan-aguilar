@@ -1,5 +1,5 @@
 import { type Request, type Response } from "express";
-import { type TransformersRepository } from "../types";
+import { type TransformerData, type TransformersRepository } from "../types";
 
 class TransformersController {
   constructor(
@@ -12,6 +12,13 @@ class TransformersController {
   ): Promise<void> => {
     const transformers = await this.transformersRepository.getTransformers();
     res.status(200).json({ transformers });
+  };
+
+  public addTransformer = async (req: Request, res: Response) => {
+    const responseBody = req.body as TransformerData;
+    const addedTransformer =
+      await this.transformersRepository.addTransformer(responseBody);
+    res.status(200).json({ transformer: addedTransformer });
   };
 }
 
