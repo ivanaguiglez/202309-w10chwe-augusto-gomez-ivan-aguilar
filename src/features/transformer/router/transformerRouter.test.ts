@@ -6,7 +6,7 @@ import { MongoMemoryServer } from "mongodb-memory-server";
 import mongoose from "mongoose";
 import { type TransformerStructure } from "../types";
 import transformersMock from "../mocks/transformersMock";
-import Transformer from "../../model/Transformer";
+import Transformer from "../../models/Transformer";
 
 let server: MongoMemoryServer;
 
